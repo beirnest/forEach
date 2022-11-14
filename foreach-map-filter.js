@@ -85,26 +85,21 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-    let count = 0;
-    const newArr = [];
     const newObj = {};
     const arr = Array.from(str);
+    console.log(arr);
    arr.forEach(function(letter){
     if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u"){
         if (!newObj[letter]){
             newObj[letter] = 1;
-            count = 1;
         }
         else if (newObj[letter]) {
-            count++;
-            newObj[letter] = count;
+            newObj[letter] += 1;
         }
     }
-    else if (letter = arr.length){
-        newArr.push(newObj);
-    }
    })
-   return newArr;
+   console.log(newObj);
+   return newObj;
 }
 
 /*
